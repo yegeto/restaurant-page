@@ -1,4 +1,5 @@
-import createListItem from "./createListItem.js";
+import createListItem from "./utils/createListItem.js";
+
 export default function homePage() {
   const pageContainer = document.createElement("div");
   const header = document.createElement("h1");
