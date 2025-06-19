@@ -1,6 +1,6 @@
 import createListItem from "./createListItem.js";
 export default function homePage() {
-  const mainContainer = document.getElementById("content");
+  const pageContainer = document.createElement("div");
   const header = document.createElement("h1");
   const introSection = document.createElement("section");
   const introText = document.createElement("p");
@@ -36,8 +36,10 @@ export default function homePage() {
   addressInfo.textContent = "123 Forest Drive, Forestville, Maine";
   addressSection.appendChild(addressInfo);
 
-  mainContainer.appendChild(header);
-  mainContainer.appendChild(introSection);
-  mainContainer.appendChild(hoursSection);
-  mainContainer.appendChild(addressSection);
+  pageContainer.appendChild(header);
+  pageContainer.appendChild(introSection);
+  pageContainer.appendChild(hoursSection);
+  pageContainer.appendChild(addressSection);
+
+  return pageContainer;
 }

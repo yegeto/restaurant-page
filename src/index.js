@@ -1,3 +1,8 @@
-import homePage from "./homePage.js";
+import homePageCreator from "./homePage";
 
-homePage();
+const contentLoader = (function () {
+  const contentContainer = document.getElementById("content");
+  const homePage = homePageCreator();
+
+  contentContainer.appendChild(homePage);
+})();
