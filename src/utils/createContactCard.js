@@ -1,6 +1,7 @@
 export default function createContactCard(parent) {
   const contactCard = document.createElement("div");
   parent.appendChild(contactCard);
+  contactCard.classList.add("page-section");
 
   const addName = (name) => {
     const contactName = document.createElement("h2");

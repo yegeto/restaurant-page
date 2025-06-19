@@ -5,6 +5,8 @@ export default function homePage() {
   const pageContainer = document.createElement("div");
   const header = document.createElement("h1");
 
+  pageContainer.classList.add("page", "home");
+
   header.textContent = "Beary's Breakfast Bar";
   pageContainer.appendChild(header);
 
@@ -26,6 +28,7 @@ export default function homePage() {
   hoursList.addHoursItem("Saturday: 8am - 10pm");
 
   const locationSection = createInfoCard(pageContainer);
+  locationSection.getCardElement().classList.add("location");
   locationSection.addHeader("Location");
   locationSection.addContent("123 Forest Drive, Forestville, Maine");
 

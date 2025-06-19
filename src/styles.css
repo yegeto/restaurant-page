@@ -1,0 +1,140 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+:root {
+  line-height: 1.5;
+}
+
+body,
+h1,
+h2,
+h3,
+p {
+  margin: 0;
+}
+
+body {
+  font-family: system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  background-color: #ffec7c;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+header {
+  margin: 20px 0;
+}
+
+nav {
+  display: flex;
+  gap: 30px;
+}
+
+nav button {
+  padding: 10px 30px;
+  background-color: inherit;
+  border: none;
+  border-bottom: 2px solid black;
+  font-size: 1.2rem;
+}
+
+nav button:hover {
+  background-color: #ffc84a;
+  border: none;
+  border-radius: 8px;
+}
+
+.selected {
+  border: 2px solid black;
+  background-color: #ffc84a;
+}
+
+#content {
+  width: 50%;
+  border: 21px double black;
+}
+
+.page {
+  padding: 26px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.page>h1,
+.page .page-section,
+.menu-section h2 {
+  background-color: #f6c62c;
+  border: 5px solid #b46d11;
+  border-radius: 12px;
+}
+
+.page h1 {
+  text-align: center;
+  margin-bottom: 50px;
+  width: 80%;
+  margin: 1rem auto 3rem;
+}
+
+.page-section {
+  margin: 20px 0px;
+  padding: 27px;
+  width: 80%;
+}
+
+.page-section h2 {
+  margin-bottom: 10px;
+}
+
+.home .reference,
+.home .hours-list,
+.location p {
+  text-indent: 2rem;
+}
+
+.home .hours-list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.menu-section {
+  margin-bottom: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.menu-section h2 {
+  padding: 3px 20px;
+}
+
+.offering-header {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.price-tag,
+.img-container {
+  display: inline-block;
+}
+
+.price-tag {
+  vertical-align: top;
+  margin-left: 20px;
+}
+
+.img-container {
+  width: 100px;
+  height: 100px;
+  border: 3px solid #d28b19;
+  margin-left: 200px;
+  margin-top: 1rem;
+}
+
+.contact .page-section p {
+  text-indent: 2rem;
+}

@@ -4,6 +4,8 @@ export default function contactPage() {
   const pageContainer = document.createElement("div");
   const header = document.createElement("h1");
 
+  pageContainer.classList.add("page", "contact");
+
   pageContainer.appendChild(header);
   header.textContent = "Contact Us";
 

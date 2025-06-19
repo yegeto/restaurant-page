@@ -5,6 +5,8 @@ export default function menuPage() {
   const pageContainer = document.createElement("div");
   const header = document.createElement("h1");
 
+  pageContainer.classList.add("page", "menu");
+
   pageContainer.appendChild(header);
   header.textContent = "Menu";
 
@@ -23,7 +25,7 @@ export default function menuPage() {
     "A comforting, almost filling, tea that is infused with the flavors of several kinds of berries. Best served cold, but can be served hot on request."
   );
   bearyTea.addPriceTag(3);
-  honeyCard.addImage();
+  bearyTea.addImage();
 
   const sidesSection = createMenuSection(pageContainer);
   sidesSection.addHeader("Sides");

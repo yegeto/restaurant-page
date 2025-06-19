@@ -1,6 +1,7 @@
 export default function createMenuSection(parent) {
   const menuSection = document.createElement("section");
   parent.appendChild(menuSection);
+  menuSection.classList.add("menu-section");
 
   const getSection = () => menuSection;
 
