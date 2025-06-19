@@ -1,46 +1,33 @@
-import createListItem from "./utils/createListItem.js";
+import addHoursList from "./utils/addHoursInfo";
+import createInfoCard from "./utils/createInfoCard";
 
 export default function homePage() {
   const pageContainer = document.createElement("div");
   const header = document.createElement("h1");
-  const introSection = document.createElement("section");
-  const introText = document.createElement("p");
-  const introReference = document.createElement("p");
-  const hoursSection = document.createElement("section");
-  const hoursHeader = document.createElement("h2");
-  const hoursList = document.createElement("p");
-  const addressSection = document.createElement("section");
-  const addressHeader = document.createElement("h2");
-  const addressInfo = document.createElement("p");
 
   header.textContent = "Beary's Breakfast Bar";
-
-  introText.textContent =
-    "Beary's has the best porridge! The atmosphere and customer service make you feel like you are sitting in the middle of the woods, eating like a bear! This is exactly the kind of place that I like to return to again and again.";
-  introReference.textContent = "Goldilocks";
-  introSection.appendChild(introText);
-  introSection.appendChild(introReference);
-
-  hoursHeader.textContent = "Hours";
-  hoursSection.appendChild(hoursHeader);
-  const sundayInfo = createListItem("Sunday: 8am - 8pm", hoursList);
-  const mondayInfo = createListItem("Monday: 6am - 6pm", hoursList);
-  const tuesdayInfo = createListItem("Tuesday: 6am - 6pm", hoursList);
-  const wednesdayInfo = createListItem("Wednesday: 6am - 6pm", hoursList);
-  const thursdayInfo = createListItem("Thursday: 6am - 10pm", hoursList);
-  const fridayInfo = createListItem("Friday: 6am - 10pm", hoursList);
-  const SaturdayInfo = createListItem("Saturday: 8am - 10pm", hoursList);
-  hoursSection.appendChild(hoursList);
-
-  addressHeader.textContent = "Location";
-  addressSection.appendChild(addressHeader);
-  addressInfo.textContent = "123 Forest Drive, Forestville, Maine";
-  addressSection.appendChild(addressInfo);
-
   pageContainer.appendChild(header);
-  pageContainer.appendChild(introSection);
-  pageContainer.appendChild(hoursSection);
-  pageContainer.appendChild(addressSection);
+
+  const greetingSection = createInfoCard(pageContainer);
+  greetingSection.addContent(
+    "Beary's has the best porridge! The atmosphere and customer service make you feel like you are sitting in the middle of the woods, eating like a bear! This is exactly the kind of place that I like to return to again and again."
+  );
+  greetingSection.addReference("Goldilocks");
+
+  const workingHoursSection = createInfoCard(pageContainer);
+  workingHoursSection.addHeader("Hours");
+  const hoursList = addHoursList(workingHoursSection.getCardElement());
+  hoursList.addHoursItem("Sunday: 8am - 8pm");
+  hoursList.addHoursItem("Monday: 6am - 6pm");
+  hoursList.addHoursItem("Tuesday: 6am - 6pm");
+  hoursList.addHoursItem("Wednesday: 6am - 6pm");
+  hoursList.addHoursItem("Thursday: 6am - 10pm");
+  hoursList.addHoursItem("Friday: 6am - 10pm");
+  hoursList.addHoursItem("Saturday: 8am - 10pm");
+
+  const locationSection = createInfoCard(pageContainer);
+  locationSection.addHeader("Location");
+  locationSection.addContent("123 Forest Drive, Forestville, Maine");
 
   return pageContainer;
 }

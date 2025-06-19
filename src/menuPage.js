@@ -96,7 +96,7 @@ export default function menuPage() {
   const bearyBestPorridge = createMenuCard(mainDishesSection.getSection());
   bearyBestPorridge.addHeader("The Beary Best Porridge");
   bearyBestPorridge.addInfo(
-    "Made by Baby Bear himself, this porridge is guarenteed to be just right, or your money back."
+    "Made by Baby Bear himself, this porridge is guaranteed to be just right, or your money back."
   );
   bearyBestPorridge.addPriceTag(5);
   bearyBestPorridge.addImage();

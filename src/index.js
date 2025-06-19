@@ -11,7 +11,7 @@ import menuPageCreator from "./menuPage";
   const menuPage = menuPageCreator();
   const contactPage = contactPageCreator();
 
-  contentContainer.appendChild(contactPage);
+  contentContainer.appendChild(homePage);
 
   homeBtn.addEventListener("click", () => {
     contentContainer.innerHTML = "";
